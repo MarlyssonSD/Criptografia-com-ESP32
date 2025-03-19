@@ -59,9 +59,3 @@ O código realiza os seguintes passos:
 3. Criptografa o texto usando o modo **CBC** e a chave definida.
 4. Exibe o **texto criptografado** no Monitor Serial em formato hexadecimal.
 5. Descriptografa o texto criptografado e exibe o **texto original** novamente.
-
-
-// Vetor de Inicialização (IV) de 16 bytes
-const uint8_t iv_original[16] = { 'E', 'S', 'P', '3', '2', '_', 'I', 'V', '_', 'V', 'E', 'C', 'T', 'O', 'R', '!' };
-
-void criptografarAES(const uint8_t *e

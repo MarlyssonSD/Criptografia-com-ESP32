@@ -78,14 +78,14 @@ void descriptografarAES_ECB(const uint8_t *entrada, uint8_t *saida, size_t taman
 void setup() {
     Serial.begin(115200);
     delay(1000);
-    Serial.println("\n\n=== TESTE DE EFICIÊNCIA DO VETOR DE INICIALIZAÇÃO (IV) ===");
 
     // Teste: Texto com padrões repetitivos
     Serial.println("\n=== TESTE: CRIPTOGRAFANDO TEXTO COM PADRÕES REPETITIVOS ===");
     
     // Criamos um texto com padrões repetitivos (3 blocos iguais)
     uint8_t texto_padrao[TAMANHO * BLOCOS];
-    uint8_t padrao[TAMANHO] = { 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A' };
+    // uint8_t padrao[TAMANHO] = { 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A' };
+    uint8_t padrao[TAMANHO] = { 'S', 'E', 'N', 'H', 'A', 'L', 'E', 'G', 'A', 'L', '1', '2', '3', '4', '5', '6' };
     
     for (int i = 0; i < BLOCOS; i++) {
         memcpy(&texto_padrao[i * TAMANHO], padrao, TAMANHO);
